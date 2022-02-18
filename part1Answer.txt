@@ -1,0 +1,38 @@
+Results for the extraLargeArray 100000
+insert 931.8765 ms  
+append 2.3657 ms 					
+-----------------------------------------------
+Results for the LargeArray 10000
+insert 8.3781 ms
+append 508.9 μs
+-----------------------------------------------
+Results for the mediumArray 1000
+insert 173.4 μs
+append 139.5 μs
+-----------------------------------------------
+Results for the smallArray 100
+insert 47.5 μs
+append 91.4 μs
+-----------------------------------------------
+Results for the tinyArray 10
+insert 38.6 μs
+append 82 μs
+---------------------------------------------------------------------------------------------------------------------------------------------
+Notes
+Insert - .unshift method
+append - .push
+
+The unshift() method adds new items to the beginning of an array, and returns the new length. Note: This method changes the length of an array. Tip: To add new items at the end of an array, use the push() method
+
+The push() method adds one or more elements to the end of an array and returns the new length of the array.
+
+ms= milliseconds 1000ms = 1s
+us = Microsecond 1μs = 0.001ms
+---------------------------------------------------------------------------------------------------------------------------------------------
+Paragraph
+Read over the results, and write a paragraph that explains the pattern you see. How does each function “scale”? Which of the two functions scales better? How can you tell?
+
+
+in conclusion doubleAppend Function is faster than DoublerInsert, doubleAppend uses the push method which is pretty fast in making the new array in our test case. while doubleAppend does have a faster test case during smallArray
+and tinyArray, the reason is .unshift has a better ability with working with smaller length of numbers in a array, as you can see how the test case speed changes once it reaches the mediumArray. However we can still notice that .push 
+or doubleAppend function is the best cause its test time scales  cosistenly in Microsecond for the most until it reaches extraLargeArray where its getting into milliseconds. best choice would have to be doubleAppend.
