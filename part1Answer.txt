@@ -36,3 +36,5 @@ Read over the results, and write a paragraph that explains the pattern you see. 
 in conclusion doubleAppend Function is faster than DoublerInsert, doubleAppend uses the push method which is pretty fast in making the new array in our test case. while doubleAppend does have a faster test case during smallArray
 and tinyArray, the reason is .unshift has a better ability with working with smaller length of numbers in a array, as you can see how the test case speed changes once it reaches the mediumArray. However we can still notice that .push 
 or doubleAppend function is the best cause its test time scales  cosistenly in Microsecond for the most until it reaches extraLargeArray where its getting into milliseconds. best choice would have to be doubleAppend.
+
+ 
